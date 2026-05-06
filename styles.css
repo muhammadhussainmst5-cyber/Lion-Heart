@@ -525,7 +525,7 @@
 }
 
 .check-list li::before {
-    content: url(/assets/checkmark.webp);
+    content: url(./assets/checkmark.webp);
 }
 
 
@@ -671,7 +671,7 @@
    ============================================================ */
 .testimonial-slider-section {
     padding: 120px 20px;
-    background: url(/assets/testimonial-bg.webp) center / contain no-repeat;
+    background: url(./assets/testimonial-bg.webp) center / contain no-repeat;
 }
 
 /* Outer Wrapper */

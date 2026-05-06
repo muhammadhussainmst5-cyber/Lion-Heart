@@ -671,7 +671,7 @@
    ============================================================ */
 .testimonial-slider-section {
     padding: 120px 20px;
-    background: url(./assets/testimonial-bg.webp) center / contain no-repeat;
+    background: url(./assets/testimonial-bg.webp) center / cover no-repeat;
 }
 
 /* Outer Wrapper */

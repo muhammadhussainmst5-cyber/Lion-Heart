@@ -575,7 +575,7 @@
 }
 
 .faq-right h2 span {
-    color: #d90429;
+    color: var(--color-primary);
     font-family: var(--font-heading);
 }
 

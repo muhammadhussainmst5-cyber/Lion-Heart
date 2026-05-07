@@ -300,17 +300,35 @@
     margin-top: 60px;
 }
 
+
+.active-users-text span {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--color-primary);
+    font-size: clamp(14px, 1vw + 0.5rem, 16px);
+}
+
+
 .avatars {
     display: flex;
     align-items: center;
+        gap: 6px;
 }
 
-.avatars img,
+
+
+.avatars img{
+
+    width: 45px;
+    height: 45px;
+     margin-left: -15px;
+}
+
+
 .avatars .plus {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border: 2px solid #530004;
+    border: 1px solid var(--color-white);
     margin-left: -15px;
 }
 
@@ -324,9 +342,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 18px;
-    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: clamp(22px, 1.2rem + 0.5vw, 24px);
+    font-family: var(--font-accent-2);
 }
 
 .active-users-text {
@@ -336,8 +354,11 @@
 
 .active-users-text strong {
     display: block;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: clamp(18px, 1vw + 0.75rem, 20px);
+    font-weight: 500;
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--color-white);
+
 }
 
 /* --- Right Side: Lead Capture Form --- */
@@ -345,7 +366,8 @@
     background: var(--color-white);
     padding: 70px;
     border-radius: 20px;
-    width: 52%;
+  
+  width: 52%;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -461,7 +483,7 @@
 .why-choose-right .main-h2 {
     font-family: var(--font-heading);
     color: var(--color-secondary);
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     font-weight: 800;
 }
 
@@ -541,7 +563,7 @@
     margin: auto;
     display: flex;
     gap: 50px;
-    align-items: center;
+    align-items: stretch;
 }
 
 /* Left Image */
@@ -551,7 +573,7 @@
 
 .faq-left img {
     width: 100%;
-    height: 797px;
+    height: stretch;
     border-radius: 25px;
     object-fit: cover;
 }
@@ -595,6 +617,11 @@
 
 .faq-list {
     margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
 
 /* Individual FAQ Item */
@@ -602,8 +629,8 @@
     background: #ffffff;
     border: 1px solid #930007;
     border-radius: 15px;
-    margin-bottom: 15px;
-    padding: 12px 20px;
+   
+    padding: 10px 30px;
     cursor: pointer;
     transition: all 0.4s ease;
     overflow: hidden;
@@ -615,6 +642,8 @@
     color: #fff;
     border: none;
     border-radius: 20px;
+    padding: 24px 30px 13px 30px;
+    
 }
 
 .faq-question {
@@ -625,6 +654,10 @@
     font-family: var(--font-body);
     font-weight: 400;
     font-size: clamp(16px, 1.2vw, 20px);
+}
+
+.faq-question span{
+    font-family: var(--font-body);
 }
 
 .faq-item.active .faq-question {
@@ -650,7 +683,7 @@
     overflow: hidden;
     margin: 0;
     padding-top: 0px;
-    line-height: 1.6;
+    line-height: 1.4;
     color: var(--color-white);
 }
 
@@ -951,10 +984,14 @@ body {
    FOOTER — CTA + Links + Copyright
    ============================================================ */
 .footer {
-    background: #000;
+    background-image: url(./assets/footer-bg.webp);
     color: #fff;
     padding: 80px 0px 40px;
-    border-radius: 70px 70px 0px 0px;
+    border-radius: 50px 50px 0px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 /* Top CTA Area (Heading + Subtext + Buttons) */
@@ -1197,6 +1234,13 @@ body {
         margin-bottom: 20px;
     }
 
+
+ .hero-form {
+        width: 52%;
+        
+ }
+
+
     .logo img {
         width: 150px;
     }
@@ -1211,6 +1255,9 @@ body {
     }
 
     .hero-form {
+   
+        width: 100%;
+        max-width: 100%;
         padding: 50px;
     }
 
@@ -1335,6 +1382,7 @@ body {
 
     .hero-form {
         width: 100%;
+        max-width: 100%;
         padding: 32px;
     }
 
@@ -1509,4 +1557,19 @@ body {
         width: 100%;
         text-align: center;
     }
+}
+
+/* testimonila cards show 2 at a time  */
+
+@media (min-width: 1025px) and (max-width: 1360px) {
+  .testimonial-card {
+    flex: 0 0 calc((100% - 40px) / 2);
+    max-width: calc((100% - 40px) / 2);
+  }
+
+
+  .testimonial-slider {
+    display: flex;
+    gap: 40px;
+}
 }
